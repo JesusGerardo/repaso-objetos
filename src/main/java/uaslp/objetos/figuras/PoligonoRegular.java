@@ -5,10 +5,16 @@ public class PoligonoRegular implements Figura{
     private int numeroDeLados;
 
     public PoligonoRegular(int numeroDeLados) {
+        if(numeroDeLados < 5)
+            throw new NumeroInvalidoDeLados("Número de lados válido a partir de 5");
+
         this.numeroDeLados = numeroDeLados;
     }
 
     public PoligonoRegular(int numeroDeLados, double lado) {
+        if(numeroDeLados < 5)
+            throw new NumeroInvalidoDeLados("Número de lados válido a partir de 5");
+
         this.numeroDeLados = numeroDeLados;
         this.lado = lado;
     }
